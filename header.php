@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <img src="images/logo.png" alt="logo du club" id="logo">
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>

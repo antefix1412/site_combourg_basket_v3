@@ -14,6 +14,10 @@ header {
     padding: 1rem;
 }
 
+#logo{
+    width: 7rem;
+}
+
 nav ul {
     padding: 2rem;
     background-color: #333;
