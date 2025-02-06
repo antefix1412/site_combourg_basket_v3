@@ -1,0 +1,265 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(42,67,99);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centre tout le texte par défaut */
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    padding: 2rem;
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centre les éléments de navigation */
+    flex-wrap: wrap; /* Permet le retour à la ligne sur les petits écrans */
+}
+
+nav ul li {
+    background-color: #333;
+    margin: 0 1rem; /* Ajoute de l'espace entre les éléments de navigation */
+}
+
+nav ul li a {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contenu principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.taille-select {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgb(42,67,99);
+    color: white;
+    border: 1px solid white;
+}
+
+.taille-select option {
+    background-color: rgb(42,67,99);
+}
+
+.couleur-select,
+.taille-select {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    width: 100%;
+    max-width: 200px;
+}
+
+.couleur-select option,
+.taille-select option {
+    background-color: rgb(42,67,99);
+}
+
+.produit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    color: var(--custom-blue);
+}
+
+/* Grilles (équipes, organigramme, produits) */
+.equipes-grid, .organigramme-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center; /* Centre les éléments dans la grille */
+    margin: 2rem 5%;
+}
+
+.produits-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center; /* Centre les éléments dans la grille */
+    margin: 2rem 0 6rem 0;
+}
+
+.equipe, .membre, .produit {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    width: 100%; /* Assure que les éléments prennent toute la largeur de leur cellule */
+    max-width: 300px; /* Limite la largeur maximale pour une meilleure apparence */
+}
+
+.equipe:hover,
+.membre:hover,
+.produit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Assure une hauteur uniforme */
+}
+
+.produit img {
+    max-height: 200px; /* Limite la hauteur de l'image */
+    object-fit: cover; /* Assure que l'image couvre bien l'espace */
+    margin-bottom: 1rem;
+}
+
+.produit h2 {
+    margin-bottom: 0.5rem;
+}
+
+.produit p {
+    margin-bottom: 1rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 0 auto; /* Centre les images */
+    display: block; /* Assure que la marge auto fonctionne pour les images */
+}
+
+.img_salle img{
+    width: 25rem;
+}
+
+.img_salle{
+    display: flex;
+}
+
+/* Boutons */
+button {
+    background-color: var(--custom-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem auto; /* Centre les boutons et ajoute de l'espace vertical */
+    display: block; /* Fait en sorte que la marge auto fonctionne pour les boutons */
+}
+
+button:hover {
+    background-color: rgb(52, 77, 109);
+}
+
+/* Page de contact */
+.contact-info {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.salle-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem auto; /* Centre l'image et ajoute de l'espace vertical */
+}
+
+/* Panier */
+#panier {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+#liste-panier {
+    list-style-type: none;
+    padding: 0;
+}
+
+#liste-panier li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.retirer-du-panier {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    border-radius: 3px;
+}
+
+.retirer-du-panier:hover {
+    background-color: #cc0000;
+}
+
+footer img{
+    width: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .equipes-grid, .organigramme-grid, .produits-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+}
+
+footer img {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+}
+
+footer p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
