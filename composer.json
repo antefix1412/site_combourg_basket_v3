@@ -1,0 +1,17 @@
+{
+    "name": "antoine/v3",
+    "autoload": {
+        "psr-4": {
+            "Antoine\\V3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Antoine Lemesle",
+            "email": "a.lemesle26@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
