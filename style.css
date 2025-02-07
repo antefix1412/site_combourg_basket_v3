@@ -47,25 +47,38 @@ main {
     padding: 2rem;
 }
 
-.taille-select {
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    background-color: rgb(42,67,99);
-    color: white;
-    border: 1px solid white;
+.floquage-option {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.taille-select option {
-    background-color: rgb(42,67,99);
+.flocage-select {
+    margin-bottom: 5px;
 }
+
+.initiales-container {
+    margin-top: 5px;
+}
+
+.initiales-input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+  
+  
+
+
 
 .couleur-select,
-.taille-select {
+.taille-select,
+#flocage {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     border-radius: 5px;
-    background-color: black;
+    background-color: rgb(42,67,99);
     color: white;
     border: 1px solid white;
     width: 100%;
@@ -73,7 +86,8 @@ main {
 }
 
 .couleur-select option,
-.taille-select option {
+.taille-select option,
+#flocage {
     background-color: rgb(42,67,99);
 }
 

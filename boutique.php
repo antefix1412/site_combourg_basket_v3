@@ -4,7 +4,7 @@
     <h1>Boutique</h1>
     <div class="produits-grid">
         <div class="produit">
-            <img src="images/image.png" alt="T-shirt">
+        <img src="images/image.png" alt="T-shirt">
             <h2>T-shirt</h2>
             <p>Prix : 50€</p>
             <select class="couleur-select" data-product-id="1">
@@ -20,6 +20,18 @@
                 <option value="L">L</option>
                 <option value="XL">XL</option>
             </select>
+            <div class="floquage-option">
+                <select id="flocage" name="flocage" onchange="toggleInitiales()" required>
+                    <option value="">Souhaitez-vous un flocage</option>
+                    <option value="non">Non</option>
+                    <option value="oui">Oui</option>
+                </select>
+                
+                <div id="initiales-container" style="display: none;">
+                    <label for="initiales">Initiales pour le flocage :</label>
+                    <input type="text" id="initiales" name="initiales" maxlength="2" placeholder="Ex : AB">
+                </div>
+            </div>
             <button class="ajouter-panier" data-id="1" data-nom="T-shirt" data-prix="50">Ajouter au panier</button>
         </div>
         <div class="produit">
@@ -39,9 +51,20 @@
                 <option value="L">L</option>
                 <option value="XL">XL</option>
             </select>
+            <div class="floquage-option">
+                <select id="flocage" name="flocage" onchange="toggleInitiales()" required>
+                    <option value="">Souhaitez-vous un flocage</option>
+                    <option value="non">Non</option>
+                    <option value="oui">Oui</option>
+                </select>
+                
+                <div id="initiales-container" style="display: none;">
+                    <label for="initiales">Initiales pour le flocage :</label>
+                    <input type="text" id="initiales" name="initiales" maxlength="2" placeholder="Ex : AB">
+                </div>
+            </div>
             <button class="ajouter-panier" data-id="2" data-nom="Polo" data-prix="35">Ajouter au panier</button>
         </div>
-        <!-- Ajoutez d'autres produits de la même manière -->
     </div>
 
     <div id="panier">
@@ -56,4 +79,12 @@
     </div>
 </div>
 
+
+<script>
+    function toggleInitiales() {
+        const flocage = document.getElementById('flocage').value;
+        const initialesContainer = document.getElementById('initiales-container');
+        initialesContainer.style.display = (flocage === 'oui') ? 'block' : 'none';
+    }
+</script>
 <?php include 'footer.php'; ?>
