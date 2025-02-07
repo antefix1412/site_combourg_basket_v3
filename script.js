@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const detailsCommande = document.getElementById('details-commande');
     const floquageSelects = document.querySelectorAll('.floquage-select');
     const floquageTexts = document.querySelectorAll('.floquage-text');
-    let panier = [];  
+    let panier = [];
       
       
     boutonsPanier.forEach(bouton => {

@@ -29,7 +29,7 @@
                 
                 <div id="initiales-container" style="display: none;">
                     <label for="initiales">Initiales pour le flocage :</label>
-                    <input type="text" id="initiales" name="initiales" maxlength="1" placeholder="Ex : AB">
+                    <input type="text" id="initiales" name="initiales" maxlength="2" placeholder="Ex : AB">
                 </div>
             </div>
             <button class="ajouter-panier" data-id="1" data-nom="T-shirt" data-prix="50">Ajouter au panier</button>
