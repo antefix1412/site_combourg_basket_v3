@@ -40,6 +40,9 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li:hover{
+    background-color: rgb(225, 224, 224);
+}
 /* Contenu principal */
 main {
     max-width: 1200px;
