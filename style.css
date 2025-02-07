@@ -73,7 +73,8 @@ main {
 
 .couleur-select,
 .taille-select,
-#flocage {
+#flocage,
+#initiales {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     border-radius: 5px;

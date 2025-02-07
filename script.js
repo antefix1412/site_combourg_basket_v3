@@ -7,57 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const detailsCommande = document.getElementById('details-commande');
     const floquageSelects = document.querySelectorAll('.floquage-select');
     const floquageTexts = document.querySelectorAll('.floquage-text');
-    let panier = [];
-
-    document.addEventListener("DOMContentLoaded", () => {
-        console.log("Script chargé !") // TEST pour voir si le JS est actif
-      
-        const flocageSelects = document.querySelectorAll(".flocage-select")
-        console.log("Nombre de sélecteurs de flocage trouvés :", flocageSelects.length) // TEST
-      
-        flocageSelects.forEach((select) => {
-          select.addEventListener("change", function () {
-            const productId = this.getAttribute("data-product-id")
-            const initialesContainer = document.getElementById(`initiales-container-${productId}`)
-      
-            console.log(`Produit ${productId} - Valeur sélectionnée : ${this.value}`) // TEST
-      
-            if (initialesContainer) {
-              if (this.value === "oui") {
-                initialesContainer.style.display = "block"
-                console.log(`Flocage activé pour le produit ${productId}`)
-              } else {
-                initialesContainer.style.display = "none"
-                const initialesInput = initialesContainer.querySelector(".initiales-input")
-                if (initialesInput) {
-                  initialesInput.value = ""
-                }
-                console.log(`Flocage désactivé pour le produit ${productId}`)
-              }
-            } else {
-              console.error(`Élément #initiales-container-${productId} introuvable`)
-            }
-          })
-        })
-      
-        const initialesInputs = document.querySelectorAll(".initiales-input")
-        console.log("Nombre de champs d'initiales trouvés :", initialesInputs.length) // TEST
-      
-        initialesInputs.forEach((input) => {
-          input.addEventListener("input", function () {
-            this.value = this.value.toUpperCase().slice(0, 2)
-          })
-        })
-      
-        //const floquageTexts = document.querySelectorAll(".floquage-text")
-        //console.log("Nombre de champs de texte de flocage trouvés :", floquageTexts.length) // TEST
-      
-        //floquageTexts.forEach((input) => {
-        //  input.addEventListener("input", function () {
-        //    this.value = this.value.toUpperCase().slice(0, 2)
-        //  })
-        //})
-      })      
+    let panier = [];  
       
       
     boutonsPanier.forEach(bouton => {
